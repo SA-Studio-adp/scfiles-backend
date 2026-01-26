@@ -19,24 +19,20 @@ function writeMovies(data) {
 }
 
 app.get("/", (req, res) => {
-  res.send("SC Files Backend (Array Mode) running");
+  res.send("SC Files Backend running");
 });
 
-/* GET ALL */
 app.get("/api/movies", (req, res) => {
   res.json(readMovies());
 });
 
-/* GET ONE */
 app.get("/api/movies/:id", (req, res) => {
   const movies = readMovies();
   const movie = movies.find(m => m.id === req.params.id);
-
   if (!movie) return res.status(404).json({ error: "Not found" });
   res.json(movie);
 });
 
-/* ADD or UPDATE */
 app.post("/api/movies", (req, res) => {
   const movies = readMovies();
   const movie = req.body;
@@ -46,25 +42,19 @@ app.post("/api/movies", (req, res) => {
   }
 
   const index = movies.findIndex(m => m.id === movie.id);
-
-  if (index >= 0) {
-    movies[index] = movie; // update
-  } else {
-    movies.push(movie); // insert
-  }
+  if (index >= 0) movies[index] = movie;
+  else movies.push(movie);
 
   writeMovies(movies);
   res.json({ success: true });
 });
 
-/* DELETE */
 app.delete("/api/movies/:id", (req, res) => {
-  let movies = readMovies();
-  movies = movies.filter(m => m.id !== req.params.id);
+  const movies = readMovies().filter(m => m.id !== req.params.id);
   writeMovies(movies);
   res.json({ success: true });
 });
 
 app.listen(PORT, () => {
-  console.log(`Backend running on ${PORT}`);
+  console.log(`Backend running on port ${PORT}`);
 });
