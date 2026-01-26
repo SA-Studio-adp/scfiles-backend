@@ -6,13 +6,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const DATA_FILE = "./movies.json";
 
-// middleware
 app.use(cors());
 app.use(express.json());
 
-// helper functions
 function readMovies() {
-  if (!fs.existsSync(DATA_FILE)) return {};
+  if (!fs.existsSync(DATA_FILE)) return [];
   return JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
 }
 
@@ -20,30 +18,25 @@ function writeMovies(data) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
 }
 
-// health check
 app.get("/", (req, res) => {
-  res.send("SC Files Backend is running");
+  res.send("SC Files Backend (Array Mode) running");
 });
 
-// GET all movies
+/* GET ALL */
 app.get("/api/movies", (req, res) => {
-  const movies = readMovies();
-  res.json(movies);
+  res.json(readMovies());
 });
 
-// GET single movie
+/* GET ONE */
 app.get("/api/movies/:id", (req, res) => {
   const movies = readMovies();
-  const movie = movies[req.params.id];
+  const movie = movies.find(m => m.id === req.params.id);
 
-  if (!movie) {
-    return res.status(404).json({ error: "Movie not found" });
-  }
-
+  if (!movie) return res.status(404).json({ error: "Not found" });
   res.json(movie);
 });
 
-// ADD or UPDATE movie
+/* ADD or UPDATE */
 app.post("/api/movies", (req, res) => {
   const movies = readMovies();
   const movie = req.body;
@@ -52,26 +45,26 @@ app.post("/api/movies", (req, res) => {
     return res.status(400).json({ error: "Movie ID required" });
   }
 
-  movies[movie.id] = movie;
-  writeMovies(movies);
+  const index = movies.findIndex(m => m.id === movie.id);
 
-  res.json({ success: true, id: movie.id });
-});
-
-// DELETE movie (optional but powerful)
-app.delete("/api/movies/:id", (req, res) => {
-  const movies = readMovies();
-
-  if (!movies[req.params.id]) {
-    return res.status(404).json({ error: "Movie not found" });
+  if (index >= 0) {
+    movies[index] = movie; // update
+  } else {
+    movies.push(movie); // insert
   }
 
-  delete movies[req.params.id];
   writeMovies(movies);
+  res.json({ success: true });
+});
 
+/* DELETE */
+app.delete("/api/movies/:id", (req, res) => {
+  let movies = readMovies();
+  movies = movies.filter(m => m.id !== req.params.id);
+  writeMovies(movies);
   res.json({ success: true });
 });
 
 app.listen(PORT, () => {
-  console.log(`SC Files backend running on port ${PORT}`);
+  console.log(`Backend running on ${PORT}`);
 });
