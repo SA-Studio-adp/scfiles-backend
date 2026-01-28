@@ -1,94 +1,122 @@
 import express from "express";
-import fs from "fs";
 import cors from "cors";
+import { promises as fs } from "fs";
+import path from "path";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const DATA_FILE = "./movies.json";
+const DATA_FILE = path.resolve("./movies.json");
 
 app.use(cors());
 app.use(express.json());
 
-function readMovies() {
+/* ===================== Helpers ===================== */
+
+async function readMovies() {
   try {
-    if (!fs.existsSync(DATA_FILE)) return [];
-    const data = fs.readFileSync(DATA_FILE, "utf-8");
+    const data = await fs.readFile(DATA_FILE, "utf-8");
     return JSON.parse(data || "[]");
   } catch (err) {
-    console.error("Read Error:", err);
-    return [];
+    if (err.code === "ENOENT") return [];
+    throw err;
   }
 }
 
-function writeMovies(data) {
-  try {
-    fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
-    return true;
-  } catch (err) {
-    console.error("Write Error:", err);
-    return false;
-  }
+async function writeMovies(movies) {
+  await fs.writeFile(DATA_FILE, JSON.stringify(movies, null, 2));
 }
+
+/* ===================== Routes ===================== */
 
 app.get("/", (req, res) => {
-  res.send("SC Files Backend is Active");
+  res.send("SC Files Backend is Active 🚀");
 });
 
-app.get("/api/movies", (req, res) => {
-  res.json(readMovies());
-});
-
-app.post("/api/movies", (req, res) => {
-  const movies = readMovies();
-  const movie = req.body;
-  const position = req.body.position || 'bottom';
-
-  if (!movie.id) {
-    return res.status(400).json({ error: "Movie ID (slug) is required" });
+app.get("/api/movies", async (req, res, next) => {
+  try {
+    const movies = await readMovies();
+    res.json(movies);
+  } catch (err) {
+    next(err);
   }
+});
 
-  const index = movies.findIndex(m => m.id === movie.id);
+app.post("/api/movies", async (req, res, next) => {
+  try {
+    const movies = await readMovies();
 
-  if (index >= 0) {
-    // Update existing entry
-    movies[index] = movie;
-    console.log(`Updated: ${movie.id}`);
-  } else {
-    // Add new entry based on requested position
-    if (position === 'top') {
-      movies.unshift(movie);
-      console.log(`Inserted at TOP: ${movie.id}`);
-    } else {
-      movies.push(movie);
-      console.log(`Appended to BOTTOM: ${movie.id}`);
+    // Extract position WITHOUT saving it
+    const { position = "bottom", ...movie } = req.body;
+
+    if (!movie.id || typeof movie.id !== "string") {
+      return res.status(400).json({ error: "Movie ID (slug) is required" });
     }
-  }
 
-  const success = writeMovies(movies);
-  
-  if (success) {
-    res.json({ 
-      success: true, 
-      count: movies.length, 
-      message: `Successfully saved ${movie.id}` 
+    const index = movies.findIndex(m => m.id === movie.id);
+
+    if (index >= 0) {
+      // Update existing movie (merge, don’t overwrite)
+      movies[index] = { ...movies[index], ...movie };
+
+      // Optional: move updated movie if position is provided
+      if (position === "top") {
+        const [item] = movies.splice(index, 1);
+        movies.unshift(item);
+      }
+
+      console.log(`Updated: ${movie.id}`);
+    } else {
+      // Insert new movie at requested position
+      if (position === "top") {
+        movies.unshift(movie);
+        console.log(`Inserted at TOP: ${movie.id}`);
+      } else {
+        movies.push(movie);
+        console.log(`Inserted at BOTTOM: ${movie.id}`);
+      }
+    }
+
+    await writeMovies(movies);
+
+    res.json({
+      success: true,
+      count: movies.length,
+      id: movie.id
     });
-  } else {
-    res.status(500).json({ error: "Failed to write to database file" });
+  } catch (err) {
+    next(err);
   }
 });
 
-app.delete("/api/movies/:id", (req, res) => {
-  const initialMovies = readMovies();
-  const filteredMovies = initialMovies.filter(m => m.id !== req.params.id);
-  
-  if (initialMovies.length === filteredMovies.length) {
-    return res.status(404).json({ error: "Movie not found" });
-  }
+app.delete("/api/movies/:id", async (req, res, next) => {
+  try {
+    const movies = await readMovies();
+    const filtered = movies.filter(m => m.id !== req.params.id);
 
-  writeMovies(filteredMovies);
-  console.log(`Deleted: ${req.params.id}`);
-  res.json({ success: true, count: filteredMovies.length });
+    if (movies.length === filtered.length) {
+      return res.status(404).json({ error: "Movie not found" });
+    }
+
+    await writeMovies(filtered);
+    console.log(`Deleted: ${req.params.id}`);
+
+    res.json({
+      success: true,
+      count: filtered.length
+    });
+  } catch (err) {
+    next(err);
+  }
 });
+
+/* ===================== Error Handler ===================== */
+
+app.use((err, req, res, next) => {
+  console.error("Server Error:", err);
+  res.status(500).json({ error: "Internal server error" });
+});
+
+/* ===================== Start ===================== */
 
 app.listen(PORT, () => {
   console.log(`Backend live on port ${PORT}`);
