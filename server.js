@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 const MOVIES_FILE = path.resolve("./movies.json");
 const COLLECTIONS_FILE = path.resolve("./collections.json");
+const SERIES_FILE = path.resolve("./series.json"); // ✅ NEW
 
 app.use(cors());
 app.use(express.json());
@@ -89,7 +90,76 @@ app.delete("/api/movies/:id", async (req, res, next) => {
   }
 });
 
-/* ===================== Collections API (YOUR FORMAT) ===================== */
+/* ===================== Series API (NEW - SAFE) ===================== */
+
+// Get all series
+app.get("/api/series", async (req, res, next) => {
+  try {
+    res.json(await readJSON(SERIES_FILE, []));
+  } catch (err) {
+    next(err);
+  }
+});
+
+// Get single series by id
+app.get("/api/series/:id", async (req, res, next) => {
+  try {
+    const series = await readJSON(SERIES_FILE, []);
+    const item = series.find(s => s.id === req.params.id);
+
+    if (!item) {
+      return res.status(404).json({ error: "Series not found" });
+    }
+
+    res.json(item);
+  } catch (err) {
+    next(err);
+  }
+});
+
+// Add or Update series
+app.post("/api/series", async (req, res, next) => {
+  try {
+    const series = await readJSON(SERIES_FILE, []);
+    const newSeries = req.body;
+
+    if (!newSeries.id) {
+      return res.status(400).json({ error: "Series ID required" });
+    }
+
+    const index = series.findIndex(s => s.id === newSeries.id);
+
+    if (index >= 0) {
+      series[index] = { ...series[index], ...newSeries };
+    } else {
+      series.push(newSeries);
+    }
+
+    await writeJSON(SERIES_FILE, series);
+    res.json({ success: true, count: series.length });
+  } catch (err) {
+    next(err);
+  }
+});
+
+// Delete series
+app.delete("/api/series/:id", async (req, res, next) => {
+  try {
+    const series = await readJSON(SERIES_FILE, []);
+    const filtered = series.filter(s => s.id !== req.params.id);
+
+    if (series.length === filtered.length) {
+      return res.status(404).json({ error: "Series not found" });
+    }
+
+    await writeJSON(SERIES_FILE, filtered);
+    res.json({ success: true, count: filtered.length });
+  } catch (err) {
+    next(err);
+  }
+});
+
+/* ===================== Collections API (UNCHANGED) ===================== */
 
 app.get("/api/collections", async (req, res, next) => {
   try {
@@ -117,7 +187,6 @@ app.get("/api/collections/:id", async (req, res, next) => {
 app.post("/api/collections", async (req, res, next) => {
   try {
     const collections = await readJSON(COLLECTIONS_FILE, {});
-
     const { id, name, banner, "bg-music": bgMusic, movies = [] } = req.body;
 
     if (!id || !name) {
