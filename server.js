@@ -196,19 +196,27 @@ app.post("/api/collections", async (req, res, next) => {
       return res.status(400).json({ error: "Collection id and name required" });
     }
 
-    collections[id] = {
-      name,
-      banner: banner || "",
-      "bg-music": bgMusic || "",
-      movies
+    // Remove existing collection if it exists
+    const { [id]: existing, ...rest } = collections;
+
+    // Rebuild object with new/updated collection at top
+    const updatedCollections = {
+      [id]: {
+        name,
+        banner: banner || "",
+        "bg-music": bgMusic || "",
+        movies
+      },
+      ...rest
     };
 
-    await writeJSON(COLLECTIONS_FILE, collections);
+    await writeJSON(COLLECTIONS_FILE, updatedCollections);
 
     res.json({
       success: true,
-      total: Object.keys(collections).length
+      total: Object.keys(updatedCollections).length
     });
+
   } catch (err) {
     next(err);
   }
