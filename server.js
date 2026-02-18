@@ -117,7 +117,7 @@ app.get("/api/series/:id", async (req, res, next) => {
   }
 });
 
-// Add or Update series
+// Add or Update series (ALWAYS MOVE TO TOP)
 app.post("/api/series", async (req, res, next) => {
   try {
     const series = await readJSON(SERIES_FILE, []);
@@ -130,13 +130,16 @@ app.post("/api/series", async (req, res, next) => {
     const index = series.findIndex(s => s.id === newSeries.id);
 
     if (index >= 0) {
-      series[index] = { ...series[index], ...newSeries };
-    } else {
-      series.push(newSeries);
+      // Remove old entry
+      series.splice(index, 1);
     }
+
+    // Always add to top
+    series.unshift(newSeries);
 
     await writeJSON(SERIES_FILE, series);
     res.json({ success: true, count: series.length });
+
   } catch (err) {
     next(err);
   }
