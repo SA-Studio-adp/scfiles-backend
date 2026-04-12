@@ -10,6 +10,10 @@ const MOVIES_FILE      = path.resolve("./movies.json");
 const COLLECTIONS_FILE = path.resolve("./collections.json");
 const SERIES_FILE      = path.resolve("./series.json");
 
+/* 🔐 MOVE YOUR API KEY HERE ONLY */
+const TMDB_KEY = "d67317159cbc25bdad2a79e81f06265d";
+const TMDB_BASE = "https://api.themoviedb.org/3";
+
 app.use(cors());
 app.use(express.json());
 
@@ -33,6 +37,34 @@ async function writeJSON(file, data) {
   await fs.writeFile(file, JSON.stringify(data, null, 2));
   _memCache[file] = data;
 }
+
+/* ===================== TMDB PROXY (🔥 FIX) ===================== */
+app.get("/api/tmdb", async (req, res) => {
+  try {
+    const path = req.query.path;
+
+    if (!path) {
+      return res.status(400).json({ error: "Missing path" });
+    }
+
+    const url = `${TMDB_BASE}${path}&api_key=${TMDB_KEY}`;
+
+    // Cache response
+    if (_memCache[url]) {
+      return res.json(_memCache[url]);
+    }
+
+    const response = await fetch(url);
+    const data = await response.json();
+
+    _memCache[url] = data;
+
+    res.json(data);
+  } catch (err) {
+    console.error("TMDB Proxy Error:", err);
+    res.status(500).json({ error: "TMDB fetch failed" });
+  }
+});
 
 /* ===================== Validation helpers ===================== */
 function badRequest(msg) { const e = new Error(msg); e.status = 400; throw e; }
@@ -129,40 +161,6 @@ app.get("/api/collections", async (req, res, next) => {
   catch (err) { next(err); }
 });
 
-app.get("/api/collections/:id", async (req, res, next) => {
-  try {
-    const collections = await readJSON(COLLECTIONS_FILE, {});
-    const collection  = collections[req.params.id];
-    if (!collection) return res.status(404).json({ error: "Collection not found" });
-    res.json(collection);
-  } catch (err) { next(err); }
-});
-
-app.post("/api/collections", async (req, res, next) => {
-  try {
-    const collections = await readJSON(COLLECTIONS_FILE, {});
-    const { id, name, banner, "bg-music": bgMusic, movies = [] } = req.body;
-    requireId(id);
-    requireStr(name, "name");
-    if (!Array.isArray(movies)) badRequest("movies must be an array");
-    const { [id]: _, ...rest } = collections;
-    const updated = { [id]: { name: name.trim(), banner: banner || "", "bg-music": bgMusic || "", movies }, ...rest };
-    await writeJSON(COLLECTIONS_FILE, updated);
-    res.json({ success: true, total: Object.keys(updated).length });
-  } catch (err) { next(err); }
-});
-
-app.delete("/api/collections/:id", async (req, res, next) => {
-  try {
-    const collections = await readJSON(COLLECTIONS_FILE, {});
-    if (!collections[req.params.id]) return res.status(404).json({ error: "Collection not found" });
-    delete collections[req.params.id];
-    await writeJSON(COLLECTIONS_FILE, collections);
-    res.json({ success: true, total: Object.keys(collections).length });
-  } catch (err) { next(err); }
-});
-
-/* ===================== Error Handler ===================== */
 app.use((err, req, res, next) => {
   if (err.status) return res.status(err.status).json({ error: err.message });
   console.error("Server Error:", err);
