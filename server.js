@@ -14,7 +14,7 @@ const SERIES_FILE      = path.resolve("./series.json");
 /* ===================== TMDB CONFIG ===================== */
 const TMDB_KEY  = "d67317159cbc25bdad2a79e81f06265d";
 const TMDB_BASE = "https://api.themoviedb.org/3";
-const TMDB_IMG = "https://image.tmdb.org/t/p/original"; // change to /original for HD
+const TMDB_IMG = "https://image.tmdb.org/t/p/w500"; // change to /original for HD
 
 /* ===================== Middleware ===================== */
 app.use(cors({ origin: "*" }));
