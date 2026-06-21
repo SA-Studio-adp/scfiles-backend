@@ -684,7 +684,7 @@
   "suriya": {
     "name": "Suriya",
     "banner": "https://image.tmdb.org/t/p/original/1eAuwNBy34kkM3xkl202z4f1NiI.jpg",
-    "bg-music": "",
+    "bg-music": "https://cdn-scfiles.vercel.app/dl/6a30c4b594432191e6419027",
     "movies": [
       {
         "id": "nerrukku-ner",

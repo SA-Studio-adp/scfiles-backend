@@ -1,5 +1,57 @@
 [
   {
+    "tmdb_id": 1696236,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a36199bb42e82204f4ed1c7",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a36199bb42e82204f4ed1c6",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a36199bb42e82204f4ed1c5"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a361a37b42e82204f4ed1c8"
+    },
+    "id": "mareechika",
+    "extras": "Tamil Audio"
+  },
+  {
+    "tmdb_id": 1510767,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a35333fd06b816d2c10f445",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a35333fd06b816d2c10f442",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a35333fd06b816d2c10f443"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a35333fd06b816d2c10f444"
+    },
+    "id": "athiradi",
+    "extras": "Tamil Audio"
+  },
+  {
+    "tmdb_id": 847742,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a3530fbd06b816d2c10f441",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a3530fad06b816d2c10f43f",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a3530fad06b816d2c10f43e"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a3530fbd06b816d2c10f440"
+    },
+    "id": "drishyam-3",
+    "extras": "Tamil Audio"
+  },
+  {
+    "tmdb_id": 1597280,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a34d7413a5b9a83810aae41",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a34d7423a5b9a83810aae43",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a34d7413a5b9a83810aae42"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a34d8353a5b9a83810aae44"
+    },
+    "id": "kenatha-kanom",
+    "extras": ""
+  },
+  {
     "tmdb_id": 1686580,
     "downloads": {
       "480": "https://cdn-scfiles.vercel.app/dl/6a30157fe1ac525f7addd004",
@@ -50,7 +102,10 @@
       "720": "https://cdn-scfiles.vercel.app/dl/6a2bf90e0294a2ae12533c9b",
       "1080": "https://cdn-scfiles.vercel.app/dl/6a2bf90e0294a2ae12533c9a"
     },
-    "subtitles": {},
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a30eb89183a1fe7d65e09d7",
+      "ta": "https://cdn-scfiles.vercel.app/dl/6a30eb89183a1fe7d65e09d6"
+    },
     "id": "karuppu",
     "extras": ""
   },
@@ -242,28 +297,6 @@
     "extras": "Tamil Audio"
   },
   {
-    "tmdb_id": 847742,
-    "downloads": {
-      "480": "https://cdn-scfiles.vercel.app/dl/6a154bc78059c3a3f00bab4c",
-      "720": "https://cdn-scfiles.vercel.app/dl/6a154bc78059c3a3f00bab4d",
-      "1080": "https://cdn-scfiles.vercel.app/dl/6a154bc78059c3a3f00bab4b"
-    },
-    "subtitles": {},
-    "id": "drishyam-3",
-    "extras": "Tamil - PreDVD"
-  },
-  {
-    "id": "athiradi-ta",
-    "tmdb_id": 1510767,
-    "extras": "Tamil - PreDVD",
-    "pos": "top",
-    "downloads": {
-      "480": "https://cdn-scfiles.vercel.app/dl/6a154b498059c3a3f00bab49",
-      "720": "https://cdn-scfiles.vercel.app/dl/6a154b498059c3a3f00bab4a",
-      "1080": "https://cdn-scfiles.vercel.app/dl/6a154b498059c3a3f00bab48"
-    }
-  },
-  {
     "tmdb_id": 1070170,
     "downloads": {
       "480": "https://cdn-scfiles.vercel.app/dl/6a154ae88059c3a3f00bab45",
@@ -353,17 +386,6 @@
     },
     "id": "son-of",
     "extras": "Tamil Audio"
-  },
-  {
-    "id": "athiradi-mal",
-    "tmdb_id": 1510767,
-    "extras": "PreDVD - Malayalam",
-    "downloads": {
-      "480": "https://cdn-scfiles.vercel.app/dl/6a0d63ed684bfc25005072cc",
-      "720": "https://cdn-scfiles.vercel.app/dl/6a0d63ed684bfc25005072cd",
-      "1080": "https://cdn-scfiles.vercel.app/dl/6a0d63ed684bfc25005072cb"
-    },
-    "subtitles": {}
   },
   {
     "tmdb_id": 1642665,
@@ -1000,17 +1022,6 @@
     "pos": "top"
   },
   {
-    "id": "dhurandhar-the-revenge-tamil",
-    "tmdb_id": 1582770,
-    "extras": "PreDVD - Tamil Audio",
-    "downloads": {
-      "480": "https://cdn-scfiles.vercel.app/dl/69bfd0b189fafa0d41322725",
-      "720": "https://cdn-scfiles.vercel.app/dl/69bfd0b189fafa0d41322724",
-      "1080": "https://cdn-scfiles.vercel.app/dl/69bfd0b189fafa0d41322723"
-    },
-    "subtitles": {}
-  },
-  {
     "id": "fourth-floor",
     "tmdb_id": 1641315,
     "extras": "",
@@ -1037,17 +1048,6 @@
     "subtitles": {
       "en": "https://cdn-scfiles.vercel.app/dl/69bd6af589fafa0d4132271a"
     }
-  },
-  {
-    "id": "dhurandhar-the-revenge",
-    "tmdb_id": 1582770,
-    "extras": "PreDVD - Hindi Audio",
-    "downloads": {
-      "480": "https://cdn-scfiles.vercel.app/dl/69bba1df06369005087e89fe",
-      "720": "https://cdn-scfiles.vercel.app/dl/69bba1df06369005087e89ff",
-      "1080": "https://cdn-scfiles.vercel.app/dl/69bba1df06369005087e89fd"
-    },
-    "subtitles": {}
   },
   {
     "id": "dhurandhar-hindi",
