@@ -1138,5 +1138,42 @@
         "download": "https://cdn-scfiles.vercel.app/dl/698df0c1c8f9fed87b2aca3e"
       }
     ]
+  },
+  "pradeep-ranganathan": {
+    "name": "Pradeep Ranganathan",
+    "banner": "https://image.tmdb.org/t/p/original/1zpPsyz1XfXHZykH3BL1M4K6R0h.jpg",
+    "bg-music": "",
+    "movies": [
+      {
+        "id": "comali",
+        "tmdb_id": 591102,
+        "quality": "1080p",
+        "download": "https://cdn-scfiles.vercel.app/dl/6a41381d413539d0977d84b8"
+      },
+      {
+        "id": "love-today",
+        "tmdb_id": 1032627,
+        "quality": "1080p",
+        "download": "https://cdn-scfiles.vercel.app/dl/6a413848413539d0977d84b9"
+      },
+      {
+        "id": "dragon",
+        "tmdb_id": 1273049,
+        "quality": "1080p",
+        "download": "https://cdn-scfiles.vercel.app/dl/6954fb423d5542bb50de573b"
+      },
+      {
+        "id": "dude",
+        "tmdb_id": 1321108,
+        "quality": "1080p",
+        "download": "https://cdn-scfiles.vercel.app/dl/6954ad2c3d5542bb50de5739"
+      },
+      {
+        "id": "love-insurance-kompany",
+        "tmdb_id": 1209511,
+        "quality": "1080p",
+        "download": "https://cdn-scfiles.vercel.app/dl/6a0565458993d0aa346c3ec9"
+      }
+    ]
   }
 }

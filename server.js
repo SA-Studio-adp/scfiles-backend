@@ -138,39 +138,13 @@ function requireStr(val, name) {
     badRequest(`${name} must be a non-empty string`);
 }
 
-/* ===================== Simple Rate Limiter ===================== */
-// Limits each IP to 60 requests/min — protects the TMDB proxy
-const _rateLimits = new Map();
-const RATE_LIMIT_WINDOW_MS = 60 * 1000;
-const RATE_LIMIT_MAX       = 60;
-
-function rateLimit(req, res, next) {
-  const ip    = req.ip || req.socket.remoteAddress;
-  const now   = Date.now();
-  const entry = _rateLimits.get(ip) || { count: 0, start: now };
-
-  if (now - entry.start > RATE_LIMIT_WINDOW_MS) {
-    entry.count = 1;
-    entry.start = now;
-  } else {
-    entry.count++;
-  }
-
-  _rateLimits.set(ip, entry);
-
-  if (entry.count > RATE_LIMIT_MAX) {
-    return res.status(429).json({ error: "Too many requests — slow down" });
-  }
-  next();
-}
-
 /* ===================== Root ===================== */
 app.get("/", (req, res) => {
   res.send("SC Files Backend is Active 🚀");
 });
 
 /* ===================== TMDB PROXY ===================== */
-app.get("/api/tmdb", rateLimit, async (req, res) => {
+app.get("/api/tmdb", async (req, res) => {
   try {
     if (!TMDB_KEY) {
       return res.status(503).json({ error: "TMDB is not configured on this server" });
