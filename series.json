@@ -1,5 +1,104 @@
 [
   {
+    "tmdb_id": "307949",
+    "id": "lingam",
+    "seasons": [
+      {
+        "season_number": 1,
+        "episodes": [
+          {
+            "ep_number": 1,
+            "links": {
+              "360p": "https://cdn-scfiles.vercel.app/dl/6a41ef5965aa54764583c180",
+              "720p": "https://cdn-scfiles.vercel.app/dl/6a41ef5965aa54764583c17e",
+              "1080p": "https://cdn-scfiles.vercel.app/dl/6a41ef5965aa54764583c17f"
+            },
+            "subtitles": {
+              "en": "https://cdn-scfiles.vercel.app/dl/6a41ef5865aa54764583c17d"
+            }
+          },
+          {
+            "ep_number": 2,
+            "links": {
+              "360p": "https://cdn-scfiles.vercel.app/dl/6a41efb565aa54764583c182",
+              "720p": "https://cdn-scfiles.vercel.app/dl/6a41efb565aa54764583c184",
+              "1080p": "https://cdn-scfiles.vercel.app/dl/6a41efb565aa54764583c181"
+            },
+            "subtitles": {
+              "en": "https://cdn-scfiles.vercel.app/dl/6a41efb565aa54764583c183"
+            }
+          },
+          {
+            "ep_number": 3,
+            "links": {
+              "360p": "https://cdn-scfiles.vercel.app/dl/6a41f00b65aa54764583c188",
+              "720p": "https://cdn-scfiles.vercel.app/dl/6a41f00b65aa54764583c186",
+              "1080p": "https://cdn-scfiles.vercel.app/dl/6a41f00b65aa54764583c185"
+            },
+            "subtitles": {
+              "en": "https://cdn-scfiles.vercel.app/dl/6a41f00b65aa54764583c187"
+            }
+          },
+          {
+            "ep_number": 4,
+            "links": {
+              "360p": "https://cdn-scfiles.vercel.app/dl/6a41f06965aa54764583c189",
+              "720p": "https://cdn-scfiles.vercel.app/dl/6a41f06965aa54764583c18b",
+              "1080p": "https://cdn-scfiles.vercel.app/dl/6a41f06965aa54764583c18a"
+            },
+            "subtitles": {
+              "en": "https://cdn-scfiles.vercel.app/dl/6a41f07065aa54764583c18c"
+            }
+          },
+          {
+            "ep_number": 5,
+            "links": {
+              "360p": "https://cdn-scfiles.vercel.app/dl/6a41f0c465aa54764583c18e",
+              "720p": "https://cdn-scfiles.vercel.app/dl/6a41f0c465aa54764583c18f",
+              "1080p": "https://cdn-scfiles.vercel.app/dl/6a41f0c465aa54764583c18d"
+            },
+            "subtitles": {
+              "en": "https://cdn-scfiles.vercel.app/dl/6a41f0c465aa54764583c190"
+            }
+          },
+          {
+            "ep_number": 6,
+            "links": {
+              "360p": "https://cdn-scfiles.vercel.app/dl/6a41f1bc65aa54764583c193",
+              "720p": "https://cdn-scfiles.vercel.app/dl/6a41f1bc65aa54764583c194",
+              "1080p": "https://cdn-scfiles.vercel.app/dl/6a41f1bc65aa54764583c191"
+            },
+            "subtitles": {
+              "en": "https://cdn-scfiles.vercel.app/dl/6a41f1bc65aa54764583c192"
+            }
+          },
+          {
+            "ep_number": 7,
+            "links": {
+              "360p": "https://cdn-scfiles.vercel.app/dl/6a41f21a65aa54764583c197",
+              "720p": "https://cdn-scfiles.vercel.app/dl/6a41f21a65aa54764583c198",
+              "1080p": "https://cdn-scfiles.vercel.app/dl/6a41f21a65aa54764583c196"
+            },
+            "subtitles": {
+              "en": "https://cdn-scfiles.vercel.app/dl/6a41f21a65aa54764583c195"
+            }
+          },
+          {
+            "ep_number": 8,
+            "links": {
+              "360p": "https://cdn-scfiles.vercel.app/dl/6a41f2ed65aa54764583c199",
+              "720p": "https://cdn-scfiles.vercel.app/dl/6a41f2ed65aa54764583c19b",
+              "1080p": "https://cdn-scfiles.vercel.app/dl/6a41f2ed65aa54764583c19a"
+            },
+            "subtitles": {
+              "en": "https://cdn-scfiles.vercel.app/dl/6a41f2f265aa54764583c19c"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "resort",
     "tmdb_id": "315038",
     "seasons": [
