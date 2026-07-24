@@ -1,5 +1,394 @@
 [
   {
+    "tmdb_id": 1616237,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a5f09f7707baa6327d35f63",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a5f09f7707baa6327d35f64",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a5f09f7707baa6327d35f62"
+    },
+    "subtitles": {},
+    "id": "arulvaan",
+    "extras": "PreDVD"
+  },
+  {
+    "tmdb_id": 1368337,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a5f0471707baa6327d35f60",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a5f0471707baa6327d35f61",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a5f0471707baa6327d35f5f"
+    },
+    "subtitles": {},
+    "id": "the-odyssey",
+    "extras": "HDTS - [Tam + Tel + Hin + Eng]"
+  },
+  {
+    "tmdb_id": 1339676,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a5f029d707baa6327d35f5c",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a5f029d707baa6327d35f5d",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a5f029d707baa6327d35f5e"
+    },
+    "subtitles": {},
+    "id": "i,-nobody",
+    "extras": "PreDVD - Malayalam"
+  },
+  {
+    "tmdb_id": 1432631,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a59dafcdaa6924b4e641370",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a59dafcdaa6924b4e64136f",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a59dafcdaa6924b4e64136e"
+    },
+    "subtitles": {},
+    "id": "idhayam-murali",
+    "extras": "PreDVD"
+  },
+  {
+    "tmdb_id": 1227241,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a59da72daa6924b4e64136a",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a59da72daa6924b4e64136b",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a59da72daa6924b4e64136d"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a59da72daa6924b4e64136c"
+    },
+    "id": "maa-inti-bangaram",
+    "extras": "Tamil Audio"
+  },
+  {
+    "tmdb_id": 1732605,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a59da07daa6924b4e641367",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a59da07daa6924b4e641368",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a59da07daa6924b4e641369"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a59da07daa6924b4e641366"
+    },
+    "id": "sannidhanam-p.o.",
+    "extras": ""
+  },
+  {
+    "id": "thiraivi",
+    "tmdb_id": 1627642,
+    "extras": "",
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a59d994daa6924b4e641362",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a59d994daa6924b4e641364",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a59d994daa6924b4e641365"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a59d994daa6924b4e641363"
+    }
+  },
+  {
+    "tmdb_id": 1646090,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a59d8e4daa6924b4e64135f",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a59d8e4daa6924b4e641360",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a59d8e4daa6924b4e641361"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a59d8e4daa6924b4e64135e"
+    },
+    "id": "vowels",
+    "extras": ""
+  },
+  {
+    "tmdb_id": 1171094,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a59d871daa6924b4e64135a",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a59d871daa6924b4e64135d",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a59d871daa6924b4e64135c"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a59d871daa6924b4e64135b"
+    },
+    "id": "ek-din",
+    "extras": "Tamil Audio"
+  },
+  {
+    "tmdb_id": 1602337,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a59d7dcdaa6924b4e641357",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a59d7dcdaa6924b4e641359",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a59d7dcdaa6924b4e641356"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a59d7dcdaa6924b4e641358"
+    },
+    "id": "parimala-and-co",
+    "extras": ""
+  },
+  {
+    "tmdb_id": 1565790,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a59d236daa6924b4e641355",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a59d236daa6924b4e641352",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a59d236daa6924b4e641354"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a59d236daa6924b4e641353"
+    },
+    "id": "double-occupancy",
+    "extras": ""
+  },
+  {
+    "tmdb_id": 58574,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a59d14cdaa6924b4e641351",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a59d14cdaa6924b4e64134e",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a59d14cdaa6924b4e641350"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a59d14cdaa6924b4e64134f"
+    },
+    "id": "sherlock-holmes:-a-game-of-shadows",
+    "extras": "Multi Audio"
+  },
+  {
+    "tmdb_id": 1620357,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a59cc52daa6924b4e64134b",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a59cc52daa6924b4e64134c",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a59cc52daa6924b4e64134d"
+    },
+    "subtitles": {},
+    "id": "lakshmikanthan-kolai-vazhakku",
+    "extras": "PreDVD"
+  },
+  {
+    "tmdb_id": 1212763,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a59cbb8daa6924b4e641348",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a59cbb8daa6924b4e64134a",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a59cbb8daa6924b4e641349"
+    },
+    "subtitles": {},
+    "id": "evil-dead-burn",
+    "extras": "PreDVD - Multi Audio"
+  },
+  {
+    "tmdb_id": 1484913,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a59cb62daa6924b4e641345",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a59cb62daa6924b4e641344",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a59cb62daa6924b4e641347"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a59cb62daa6924b4e641346"
+    },
+    "id": "ikka",
+    "extras": "Multi Audio"
+  },
+  {
+    "tmdb_id": 1516529,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a59caa5daa6924b4e641342",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a59caa5daa6924b4e641343",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a59caa5daa6924b4e641341"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a59caa5daa6924b4e641340"
+    },
+    "id": "dose",
+    "extras": "Tamil Audio"
+  },
+  {
+    "tmdb_id": 1626170,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a59c9d4daa6924b4e64133c",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a59c9d4daa6924b4e64133e",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a59c9d4daa6924b4e64133d"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a59c9d4daa6924b4e64133f"
+    },
+    "id": "sing-geetham",
+    "extras": "Tamil Audio"
+  },
+  {
+    "tmdb_id": 1444744,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a59c8dddaa6924b4e64133a",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a59c8dddaa6924b4e641338",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a59c8dddaa6924b4e641339"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a59c8e5daa6924b4e64133b"
+    },
+    "id": "konjam-kadhal-konjam-modhal",
+    "extras": ""
+  },
+  {
+    "tmdb_id": 1070157,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a58c1382efedd6539f617e5",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a58c1382efedd6539f617e6",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a58c1382efedd6539f617e7"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a58c1382efedd6539f617e8"
+    },
+    "id": "balti",
+    "extras": "Tamil Audio"
+  },
+  {
+    "tmdb_id": 1057265,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a58c05d2efedd6539f617e2",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a58c05d2efedd6539f617e3",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a58c05d2efedd6539f617e1"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a58c05d2efedd6539f617e4"
+    },
+    "id": "peddi",
+    "extras": "Tamil Audio"
+  },
+  {
+    "tmdb_id": 1707620,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a58bf322efedd6539f617e0",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a58bf322efedd6539f617de",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a58bf322efedd6539f617dd"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a58bf322efedd6539f617df"
+    },
+    "id": "trikala:-script-of-god",
+    "extras": "Tamil Audio"
+  },
+  {
+    "tmdb_id": 1728951,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a58bb012efedd6539f617d4",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a58bb012efedd6539f617d3",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a58bb012efedd6539f617d2"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a58bb012efedd6539f617d1"
+    },
+    "id": "mukhbir:-the-story-of-a-spy---the-movie",
+    "extras": "Tamil Audio"
+  },
+  {
+    "tmdb_id": 1326891,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a589add49e48b3eef95c601",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a589add49e48b3eef95c603",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a589add49e48b3eef95c602"
+    },
+    "subtitles": {},
+    "id": "ananthan-kaadu",
+    "extras": "v2 - PreDVD"
+  },
+  {
+    "tmdb_id": 1442396,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a589a8749e48b3eef95c600",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a589a8749e48b3eef95c5fe",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a589a8749e48b3eef95c5ff"
+    },
+    "subtitles": {},
+    "id": "nagabandham:-the-secret-treasure",
+    "extras": "PreDVD"
+  },
+  {
+    "tmdb_id": 1315772,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a5896ce49e48b3eef95c5fc",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a5896ce49e48b3eef95c5fd",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a5896ce49e48b3eef95c5fb"
+    },
+    "subtitles": {},
+    "id": "minions-&-monsters",
+    "extras": "Tamil Audio"
+  },
+  {
+    "tmdb_id": 1280738,
+    "downloads": {
+      "720": "https://cdn-scfiles.vercel.app/dl/6a5761d479f522e4ac27e12d",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a5761d479f522e4ac27e12e"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a577fd0ea7af53876c05718"
+    },
+    "id": "the-furious",
+    "extras": "English Audio"
+  },
+  {
+    "tmdb_id": 1122030,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a575d6e79f522e4ac27e12c",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a575d6e79f522e4ac27e12b",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a575d6e79f522e4ac27e12a"
+    },
+    "subtitles": {},
+    "id": "alpha",
+    "extras": "PreDVD - Hindi"
+  },
+  {
+    "tmdb_id": 1503015,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a575cf779f522e4ac27e128",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a575cf779f522e4ac27e126",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a575cf879f522e4ac27e129"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a575cf779f522e4ac27e127"
+    },
+    "id": "charukesi",
+    "extras": ""
+  },
+  {
+    "tmdb_id": 1248251,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a575b7879f522e4ac27e122",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a575b7979f522e4ac27e124",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a575b7879f522e4ac27e123"
+    },
+    "subtitles": {
+      "en": "https://cdn-scfiles.vercel.app/dl/6a575cc379f522e4ac27e125"
+    },
+    "id": "mollywood-times",
+    "extras": "Tamil Audio"
+  },
+  {
+    "tmdb_id": 1509599,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a4aab383640559fa0b9d2de",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a4aab393640559fa0b9d2df",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a4aab383640559fa0b9d2dd"
+    },
+    "subtitles": {},
+    "id": "gatta-kusthi-2",
+    "extras": "PreDVD"
+  },
+  {
+    "tmdb_id": 1406543,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a46928f37d710372921c73a",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a46928f37d710372921c738",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a46928f37d710372921c739"
+    },
+    "subtitles": {},
+    "id": "karakkam",
+    "extras": "Tamil Audio"
+  },
+  {
+    "tmdb_id": 1392469,
+    "downloads": {
+      "480": "https://cdn-scfiles.vercel.app/dl/6a4691e637d710372921c736",
+      "720": "https://cdn-scfiles.vercel.app/dl/6a4691e737d710372921c737",
+      "1080": "https://cdn-scfiles.vercel.app/dl/6a4691e637d710372921c735"
+    },
+    "subtitles": {},
+    "id": "cocktail-2",
+    "extras": "Hindi Audio"
+  },
+  {
     "tmdb_id": 1202033,
     "downloads": {
       "480": "https://cdn-scfiles.vercel.app/dl/6a4506baea5ab63e9873a450",
@@ -96,17 +485,6 @@
     "extras": "PreDVD"
   },
   {
-    "tmdb_id": 1326891,
-    "downloads": {
-      "480": "https://cdn-scfiles.vercel.app/dl/6a4270b4237ce46acd0319ff",
-      "720": "https://cdn-scfiles.vercel.app/dl/6a4270b4237ce46acd0319fd",
-      "1080": "https://cdn-scfiles.vercel.app/dl/6a4270b4237ce46acd0319fe"
-    },
-    "subtitles": {},
-    "id": "ananthan-kaadu",
-    "extras": "PreDVD"
-  },
-  {
     "tmdb_id": 1686580,
     "downloads": {
       "480": "https://cdn-scfiles.vercel.app/dl/6a42702d237ce46acd0319fa",
@@ -181,17 +559,6 @@
     "subtitles": {},
     "id": "nooru-sami",
     "extras": "PreDVD"
-  },
-  {
-    "tmdb_id": 1227241,
-    "downloads": {
-      "480": "https://cdn-scfiles.vercel.app/dl/6a3a971f5175a9ad317ac991",
-      "720": "https://cdn-scfiles.vercel.app/dl/6a3a971f5175a9ad317ac98f",
-      "1080": "https://cdn-scfiles.vercel.app/dl/6a3a971f5175a9ad317ac990"
-    },
-    "subtitles": {},
-    "id": "maa-inti-bangaram",
-    "extras": "PreDVD - Tamil Audio"
   },
   {
     "tmdb_id": 1410937,
@@ -279,17 +646,6 @@
     "extras": "PreDVD"
   },
   {
-    "tmdb_id": 1565790,
-    "downloads": {
-      "480": "https://cdn-scfiles.vercel.app/dl/6a2d4fc44c329b32df19c00d",
-      "720": "https://cdn-scfiles.vercel.app/dl/6a2d4fc44c329b32df19c00c",
-      "1080": "https://cdn-scfiles.vercel.app/dl/6a2d4fc44c329b32df19c00b"
-    },
-    "subtitles": {},
-    "id": "double-occupancy",
-    "extras": "PreDVD"
-  },
-  {
     "tmdb_id": 1367220,
     "downloads": {
       "480": "https://cdn-scfiles.vercel.app/dl/6a2bf90e0294a2ae12533c9c",
@@ -348,39 +704,6 @@
     },
     "id": "michael",
     "extras": "English"
-  },
-  {
-    "tmdb_id": 1248251,
-    "downloads": {
-      "480": "https://cdn-scfiles.vercel.app/dl/6a27b024f20ec716ca68ab05",
-      "720": "https://cdn-scfiles.vercel.app/dl/6a27b024f20ec716ca68ab04",
-      "1080": "https://cdn-scfiles.vercel.app/dl/6a27b024f20ec716ca68ab03"
-    },
-    "subtitles": {},
-    "id": "mollywood-times",
-    "extras": "PreDVD - Malayalam"
-  },
-  {
-    "tmdb_id": 1602337,
-    "downloads": {
-      "480": "https://cdn-scfiles.vercel.app/dl/6a242f3e0946efc277b9d8aa",
-      "720": "https://cdn-scfiles.vercel.app/dl/6a242f3d0946efc277b9d8a8",
-      "1080": "https://cdn-scfiles.vercel.app/dl/6a242f3e0946efc277b9d8a9"
-    },
-    "subtitles": {},
-    "id": "parimala-and-co",
-    "extras": "PreDVD"
-  },
-  {
-    "tmdb_id": 1057265,
-    "downloads": {
-      "480": "https://cdn-scfiles.vercel.app/dl/6a22e9bc8c4cc9dd038e0c8a",
-      "720": "https://cdn-scfiles.vercel.app/dl/6a22e9bc8c4cc9dd038e0c8c",
-      "1080": "https://cdn-scfiles.vercel.app/dl/6a22e9bc8c4cc9dd038e0c8b"
-    },
-    "subtitles": {},
-    "id": "peddi",
-    "extras": "PreDVD"
   },
   {
     "tmdb_id": 1300501,
@@ -763,17 +1086,6 @@
       "en": "https://cdn-scfiles.vercel.app/dl/6a181b53f4fd8c091564ffbe"
     },
     "extras": ""
-  },
-  {
-    "tmdb_id": 1171094,
-    "downloads": {
-      "480": "https://cdn-scfiles.vercel.app/dl/6a054f738993d0aa346c3ebd",
-      "720": "https://cdn-scfiles.vercel.app/dl/6a054f738993d0aa346c3ebe",
-      "1080": "https://cdn-scfiles.vercel.app/dl/6a054f748993d0aa346c3ebf"
-    },
-    "subtitles": {},
-    "id": "ek-din",
-    "extras": "Tamil Audio"
   },
   {
     "tmdb_id": 933835,
@@ -1831,16 +2143,6 @@
       "480": "https://cdn-scfiles.vercel.app/dl/69820f44165ff13f1250ad02",
       "720": "https://cdn-scfiles.vercel.app/dl/69820f44165ff13f1250ad03",
       "1080": "https://cdn-scfiles.vercel.app/dl/69820f44165ff13f1250ad04"
-    }
-  },
-  {
-    "id": "thiraivi",
-    "tmdb_id": 1627642,
-    "extras": "PreDVD",
-    "downloads": {
-      "480": "https://cdn-scfiles.vercel.app/dl/69820e98165ff13f1250ad00",
-      "720": "https://cdn-scfiles.vercel.app/dl/69820e98165ff13f1250ad01",
-      "1080": "https://cdn-scfiles.vercel.app/dl/69820e98165ff13f1250acff"
     }
   },
   {
