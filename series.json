@@ -1,5 +1,25 @@
 [
   {
+    "tmdb_id": "337401",
+    "id": "jailer-2---rave",
+    "seasons": [
+      {
+        "season_number": 1,
+        "episodes": [
+          {
+            "ep_number": 1,
+            "links": {
+              "360p": "https://cdn-scfiles.vercel.app/dl/6ac63698de7bf2bdd90779e5",
+              "720p": "https://cdn-scfiles.vercel.app/dl/6ac63698de7bf2bdd90779e6",
+              "1080p": "https://cdn-scfiles.vercel.app/dl/6ac63698de7bf2bdd90779e4"
+            },
+            "subtitles": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "heart-beat",
     "tmdb_id": "248064",
     "seasons": [
